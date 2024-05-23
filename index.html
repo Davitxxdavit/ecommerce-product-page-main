@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://kit.fontawesome.com/09d2cf5386.js" crossorigin="anonymous"></script>
+  <title>Frontend Mentor | E-commerce product page</title>
+  
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  
+</head>
+<body>
+
+  <header>
+    <div class="wrapper header-wrapper">
+      <div class="nav-left">
+        <div class="burger"><img src="./images/icon-menu.svg" alt="menu"></div>
+        <div class="logo"><img src="./images/logo.svg" alt="logo"></div>
+        <ul class="nav-links">
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="nav-right">
+        <div id="cart" class="cart">
+          <div class="cart-svg"><i id="cartB" class="fa-solid fa-cart-shopping header-cart"></i>
+            <div id="cartDecor" class="cart-decor"></div>
+          </div>
+          <div id="emptyCart" class="cart-content">
+            <h4 class="cart-content-heading">Cart</h4>
+            <hr>
+            <div class="empty-cart">
+              <span class="cart-span" id="cartSpan">Your cart is empty</span>
+              <div id="filled" class="filled-main">
+                  <div class="filled">
+                    <div id="cartProductImg" class="cart-product-img"></div>
+                    <div class="cart-product-content">
+                      <p class="cart-product-p">Fall Limited Edition Sneakers</p>
+                      <div class="cart-product-content-inner">
+                        <span id="cartProductPrice" class="cart-product-content-price">$125.00</span>
+                        <span id="cartProductQuantity" class="cart-product-quantity"></span>
+                        <span id="sumPrice" class="cart-product-sum"></span>
+                      </div>
+                    </div>
+                    <i id="trash" class="fa-solid fa-trash"></i>
+                </div>
+                <button class="checkout">Checkout</button>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+        <img src="./images/image-avatar.png" alt="#" class="person">
+      </div>
+    </div>
+  </header>
+  <hr>
+   <section id="productZoom" class="prduct-zoom">
+   <div class="wrp">
+    <div id="x" class="x"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M376.6 84.5c11.3-13.6 9.5-33.8-4.1-45.1s-33.8-9.5-45.1 4.1L192 206 56.6 43.5C45.3 29.9 25.1 28.1 11.5 39.4S-3.9 70.9 7.4 84.5L150.3 256 7.4 427.5c-11.3 13.6-9.5 33.8 4.1 45.1s33.8 9.5 45.1-4.1L192 306 327.4 468.5c11.3 13.6 31.5 15.4 45.1 4.1s15.4-31.5 4.1-45.1L233.7 256 376.6 84.5z"/></svg></div>
+     <div class="intro-product bigger">
+      <div id="introImgZoom" class="intro-main-img-zoom">
+        <div id="leftArrow" class="left-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></div>
+        <div id="rightArrow" class="right-arrow"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></div>
+      </div>
+      <div class="intro-secondary-img-zoom">
+        <div id="border1Zoom" class="border"><div id="item1Zoom" class="item-zoom item1"></div></div>
+        <div id="border2Zoom" class="border"><div id="item2Zoom" class="item-zoom item2"></div></div>
+        <div id="border3Zoom" class="border"><div id="item3Zoom" class="item-zoom item3"></div></div>
+        <div id="border4Zoom" class="border"><div id="item4Zoom" class="item-zoom item4"></div></div>
+      </div>
+    </div>
+  </div>
+  </section>
+  <section class="mobile-product">
+    <div class="mobile-images">
+      <img class="mobile-image1 mobile-image" src="./images/image-product-1.jpg" alt="image">
+      <img class="mobile-image2 mobile-image" src="./images/image-product-2.jpg" alt="image">
+      <img class="mobile-image3 mobile-image" src="./images/image-product-3.jpg" alt="image">
+      <img class="mobile-image4 mobile-image" src="./images/image-product-4.jpg" alt="image">
+    </div>
+  </section>
+  <main>
+    <div class="main-wrapper">
+      <div class="intro-product">
+        <div id="introImg" class="intro-main-img">
+        </div>
+        <div class="intro-secondary-img">
+          <div id="border1" class="border"><div id="item1" class="item item1"></div></div>
+          <div id="border2" class="border"><div id="item2" class="item item2"></div></div>
+          <div id="border3" class="border"><div id="item3" class="item item3"></div></div>
+          <div id="border4" class="border"><div id="item4" class="item item4"></div></div>
+        </div>
+      </div>
+      <div class="intro-content">
+        <div class="inner-content">
+          <span class="company">Sneaker Company</span>
+          <h1 class="main-heading">Fall Limited Edition Sneakers</h1>
+          <p class="content-paragraph">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+          <div class="price">
+            <span class="new-price">$125.00</span>
+            <div class="discount">
+              <span class="discount-per">50%</span>
+            </div>
+          </div>
+          <span class="old-price">$250.00</span>
+          <div class="quantity">
+            <div class="quantity-select">
+              <i id="minus" class="fa-solid fa-minus minus"></i>
+              <!-- <img src="./images/icon-minus.svg" alt="minus" class="minus"> -->
+              <span id="quantity" class="quantity-number">0</span>
+              <!-- <img src="./images/icon-plus.svg" alt="plus" class="plus"> -->
+              <i id="plus" class="fa-solid fa-plus plus"></i>
+            </div>
+          <div id="productCart" class="add-to-cart">
+            <img src="./images/icon-cart.svg" alt="cart" class="cart-btn">
+            <button  class="add-to-cart-btn">Add to cart</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </main>
+
+
+ 
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+  
+  
+
+  
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Davit Beridze</a>.
+
+    <script src="./app.js"></script>
+  </div>
+</body>
+</html>
