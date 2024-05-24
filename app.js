@@ -35,10 +35,28 @@ const productZoom = document.getElementById("productZoom");
 const x = document.getElementById("x");
 const leftArrow = document.getElementById("leftArrow");
 const rightArrow = document.getElementById("rightArrow");
+const aside = document.getElementById("aside");
+const asideX = document.getElementById("asideX");
+const burgerMenu = document.getElementById("burgerMenu");
+const mobileLeftArrow = document.getElementById("mobileLeftArrow");
+const mobileRightArrow = document.getElementById("mobileRightArrow");
+const mobileIMG = document.getElementById("mobileIMG");
+const productCartMobile = document.getElementById("productCartMobile");
+const quantityMobile = document.getElementById("quantityMobile");
+const minusMobile = document.getElementById("minusMobile");
+const plusMobile = document.getElementById("plusMobile");
 
+burgerMenu.addEventListener("click", ()=>{
+    aside.style.display = "block";
+    document.body.style.backgroundColor = "rgba(17, 17, 17, 0.23)";
+})
+
+asideX.addEventListener("click", ()=>{
+    aside.style.display = "none";
+    document.body.style.backgroundColor = "transparent";
+})
 
 productZoom.style.display = "none";
-
 item1.classList.add("active");
 mainImg.style.backgroundImage = 'url("./images/image-product-1.jpg")';
 border1.classList.add("active-border");
@@ -108,13 +126,24 @@ minus.addEventListener("click", ()=>{
     
     if(quantity.innerHTML > 0){
       quantity.innerHTML--;  
-    }
+    };
     
+})
+
+minusMobile.addEventListener("click", ()=>{
+    if(quantityMobile.innerHTML > 0){
+        quantityMobile.innerHTML--;  
+      }
 })
 
 plus.addEventListener("click", ()=>{
     quantity.innerHTML++;
 })
+
+plusMobile.addEventListener("click", ()=>{
+    quantityMobile.innerHTML++;
+})
+
 
 
 submitBtn.addEventListener("click", ()=>{
@@ -128,6 +157,19 @@ submitBtn.addEventListener("click", ()=>{
         cartSpan.style.display = "none";
         cartDecor.style.display = "block";
         cartDecor.innerHTML = quantity.innerHTML;
+    }else{ 
+    }
+})
+
+productCartMobile.addEventListener("click", ()=>{
+    if(quantityMobile.innerHTML > 0){
+        cartProductQuantity.innerHTML = `x ${quantityMobile.innerHTML}`;
+        sumPrice.innerHTML = `$${quantityMobile.innerHTML * 125}`;
+        cartProductImg.style.backgroundImage = mainImg.style.backgroundImage;
+        filled.classList.add("display-flex");
+        cartSpan.style.display = "none";
+        cartDecor.style.display = "block";
+        cartDecor.innerHTML = quantityMobile.innerHTML;
     }else{ 
     }
 })
@@ -344,6 +386,46 @@ leftArrow.addEventListener("click", ()=>{
                 console.log("upss");
     }
 })
+
+
+
+
+        const mobileSlides = document.querySelectorAll(".mobile-intro-image img");
+        let mobileSlideIndex = 0;
+        let intervalId = null;
+        mobileSlides[0].classList.add("display-block");
+   
+   
+   
+        mobileRightArrow.addEventListener("click", (e)=>{   
+        
+                mobileSlides.forEach(slide =>{
+                    slide.classList.remove("display-block");
+                });
+
+                mobileSlides[mobileSlideIndex].classList.add("display-block");
+                mobileSlideIndex++;
+                if(mobileSlideIndex > 3){
+                    mobileSlideIndex = 0;
+                }
+    });
+
+
+    mobileLeftArrow.addEventListener("click", (e)=>{   
+        
+        mobileSlides.forEach(slide =>{
+            slide.classList.remove("display-block");
+        });
+
+        mobileSlides[mobileSlideIndex].classList.add("display-block");
+        mobileSlideIndex--;
+        if(mobileSlideIndex <= 0){
+            mobileSlideIndex = 3;
+        }
+});
+
+
+ 
 
 
 
