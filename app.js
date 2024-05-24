@@ -49,11 +49,13 @@ const plusMobile = document.getElementById("plusMobile");
 burgerMenu.addEventListener("click", ()=>{
     aside.style.display = "block";
     document.body.style.backgroundColor = "rgba(17, 17, 17, 0.23)";
+    mobileLeftArrow.style.display = "none";
 })
 
 asideX.addEventListener("click", ()=>{
     aside.style.display = "none";
     document.body.style.backgroundColor = "transparent";
+    mobileLeftArrow.style.display = "flex";
 })
 
 productZoom.style.display = "none";
