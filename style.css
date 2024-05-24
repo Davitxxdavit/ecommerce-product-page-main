@@ -709,6 +709,7 @@ hr{
     }
 
     .burger-content{
+        z-index: 9999999;
         display: none;
         position: absolute;
         top: 0;
