@@ -650,6 +650,8 @@ hr{
 
 
 @media only screen and (max-width: 480px) {
+
+   
     aside{
         display: block;
     }
@@ -657,9 +659,7 @@ hr{
         display: block;
     }
 
-    body{
-        overflow: hidden;
-    }
+
     .nav-links{
         display: none;
     }
